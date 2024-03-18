@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonLabels:         
+  rhtap/gitops: faithful-starfish-java-quarkus 
+  janus-idp.io/tekton: faithful-starfish-java-quarkus
+  backstage.io/kubernetes-id: faithful-starfish-java-quarkus
+  backstage.io/kubernetes-namespace: rhtap-dmo 
+  app.kubernetes.io/part-of: faithful-starfish-java-quarkus
+resources: 
+- application-dev.yaml 
+- application-stage.yaml 
+- application-prod.yaml  
